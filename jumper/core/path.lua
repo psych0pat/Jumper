@@ -32,6 +32,14 @@ if (...) then
     return setmetatable({_nodes = {}}, Path)
   end
 
+  --- Return a single node for a given index
+  -- returns the `node`
+  -- @class function
+  -- @treturn node `node`
+  function Path:getNode(i)
+    return self._nodes[i]
+  end
+
   --- Iterates on each single `node` along a `path`. At each step of iteration,
   -- returns the `node` plus a count value. Aliased as @{Path:nodes}
   -- @class function
